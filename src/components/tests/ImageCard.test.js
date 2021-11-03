@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import ImageCard from '../ImageCard';
 
-describe('Basic App test', () => {
+describe('Basic ImageCard test', () => {
   const div = document.createElement('div');
 
   test('Renders', () => {
-    ReactDOM.render(<App />, div);
+    ReactDOM.render(<ImageCard />, div);
     ReactDOM.unmountComponentAtNode(div);
   })
 });

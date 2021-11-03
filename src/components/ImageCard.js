@@ -5,10 +5,10 @@ const ImageCard = () => {
     <article>
       <div>
         <div>
-          <p>image</p>
+          <img src="https://picsum.photos/id/237/200/300" alt="picsum"/>
         </div>
         <div>
-          <h1>Tempo</h1>
+          <h3>Tempo</h3>
         </div>
       </div>
     </article>

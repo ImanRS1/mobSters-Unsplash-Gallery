@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Header from '../Header';
 
-describe('Basic App test', () => {
+describe('Basic Header test', () => {
   const div = document.createElement('div');
 
   test('Renders', () => {
-    ReactDOM.render(<App />, div);
+    ReactDOM.render(<Header />, div);
     ReactDOM.unmountComponentAtNode(div);
   })
 });

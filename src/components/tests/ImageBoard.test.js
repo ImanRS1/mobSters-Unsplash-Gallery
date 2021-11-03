@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import ImageBoard from '../ImageBoard';
 
-describe('Basic App test', () => {
+describe('Basic ImageBoard test', () => {
   const div = document.createElement('div');
 
   test('Renders', () => {
-    ReactDOM.render(<App />, div);
+    ReactDOM.render(<ImageBoard />, div);
     ReactDOM.unmountComponentAtNode(div);
   })
 });

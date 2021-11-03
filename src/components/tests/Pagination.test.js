@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Pagination from '../Pagination';
 
-describe('Basic App test', () => {
+describe('Basic Pagination test', () => {
   const div = document.createElement('div');
 
   test('Renders', () => {
-    ReactDOM.render(<App />, div);
+    ReactDOM.render(<Pagination />, div);
     ReactDOM.unmountComponentAtNode(div);
   })
 });

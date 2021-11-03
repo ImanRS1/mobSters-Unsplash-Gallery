@@ -5,6 +5,15 @@ const ImageBoard = () => {
   return (
     <section>
       <ImageCard />
+      <ImageCard />
+      <ImageCard />
+      <ImageCard />
+      <ImageCard />
+      <ImageCard />
+      <ImageCard />
+      <ImageCard />
+      <ImageCard />
+      <ImageCard />
     </section>
   )
 }

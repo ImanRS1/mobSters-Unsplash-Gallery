@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import PaginationButton from '../PaginationButton';
 
-describe('Basic App test', () => {
+describe('Basic PaginationButton test', () => {
   const div = document.createElement('div');
 
   test('Renders', () => {
-    ReactDOM.render(<App />, div);
+    ReactDOM.render(<PaginationButton />, div);
     ReactDOM.unmountComponentAtNode(div);
   })
 });
