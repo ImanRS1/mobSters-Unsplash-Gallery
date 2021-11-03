@@ -1,17 +1,25 @@
 import React from 'react';
 import ImageCard from './ImageCard';
+import styled from "styled-components";
 
 const ImageBoard = props => {
 
   const imageGenerator = data => {
-    return data.map(img => <ImageCard url={img.urls.small} author={img.user.name} descript={img.alt_description} />)
+    return data.map(img => <ImageCard url={img.urls.small} author={img.user.name} descript={img.alt_description} key={img.id} />)
   }
 
   return (
-    <section>
+    <ImageContainer>
       {imageGenerator(props.data)}
-    </section>
+    </ImageContainer>
   )
 }
+
+const ImageContainer = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+`;
 
 export default ImageBoard

@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffects } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import Header from './components/Header';
 import Search from './components/Search';
@@ -16,29 +16,28 @@ const App = () => {
   const updateInput = (searchInput) => {
     setInput(searchInput);
   };
-
-  const updatePage = () => {
-    setPage(1);
-  };
   
   const config = {
     unsplashKey: 'lZ-oVPWLFJv-IRXFSqoTPMeyuQAXJ3IscBdCfiqSeIw',
   };
 
-  const getData = async input => {
+  const getData = async (input, page) => {
     const data = await axios.get(`https://api.unsplash.com/search/photos/?query=${input}&page=${page}&client_id=${config.unsplashKey}`);
     setTotalPages(data.data.total_pages);
     setData(data.data.results);
   };
 
-  console.log(totalPages, data);
+  const updatePage = (input, num=1) => {
+    setPage(num);
+    getData(input, num);
+  };
 
   return (
     <div className="App">
       <Header />
-      <Search updateInput={updateInput} input={input} updatePage={updatePage} getData={getData} />
+      <Search updateInput={updateInput} input={input} updatePage={updatePage} page={page} />
       <ImageBoard data={data}/>
-      <Pagination />
+      <Pagination page={page} updatePage={updatePage} totalPages={totalPages} input={input} />
       <Footer />
     </div>
   );

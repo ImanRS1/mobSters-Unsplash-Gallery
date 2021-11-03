@@ -1,24 +1,61 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
 
 const Search = (props) => {
-  const handleChange = e => {
+  const handleChange = (e) => {
     e.preventDefault();
     props.updateInput(e.target.value);
-  }
+  };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    props.updatePage();
-    e.target.children[0].value = '';
-    props.getData(props.input);
-  }
+    props.updatePage(props.input);
+    e.target.children[0].value = "";
+  };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" className="search-input" placeholder="Search..." onChange={handleChange} required/>
+    <SearchForm onSubmit={handleSubmit}>
+      <input
+        type="text"
+        className="search-input"
+        placeholder="Search..."
+        onChange={handleChange}
+        required
+      />
       <button type="submit">Search</button>
-    </form>
-  )
-}
+    </SearchForm>
+  );
+};
 
-export default Search
+const SearchForm = styled.form`
+  width: 80vw;
+  margin: 6.5rem auto 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #a13941ff;
+  border-radius: 5px;
+
+  input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  button {
+    width: 50%;
+    background-color: #a13941ff;
+    border: none;
+    color: #fcf6f5ff;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+`;
+
+export default Search;

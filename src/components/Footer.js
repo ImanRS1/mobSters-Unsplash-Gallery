@@ -1,11 +1,19 @@
-import React from 'react'
+import React from 'react';
+import styled from "styled-components";
 
 const Footer = () => {
   return (
-    <footer>
+    <FooterS>
       <p>GitHub Icon</p>
-    </footer>
+    </FooterS>
   )
 }
+
+const FooterS = styled.footer`
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  background-color: #a13941ff;
+`;
 
 export default Footer;

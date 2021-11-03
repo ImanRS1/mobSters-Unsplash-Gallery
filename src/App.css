@@ -1,1 +1,7 @@
 @import url("./styles/normalize.css");
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fcf6f5ff;
+}
