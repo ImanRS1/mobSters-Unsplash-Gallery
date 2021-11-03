@@ -1,14 +1,15 @@
 import React from 'react'
 
-const ImageCard = () => {
+const ImageCard = props => {
   return (
     <article>
       <div>
         <div>
-          <img src="https://picsum.photos/id/237/200/300" alt="picsum"/>
+          <img src={props.url} alt={props.descript}/>
         </div>
         <div>
-          <h3>Tempo</h3>
+          <h3>{props.author}</h3>
+          <p>{props.descript}</p>
         </div>
       </div>
     </article>

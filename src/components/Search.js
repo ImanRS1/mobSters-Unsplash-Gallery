@@ -1,15 +1,21 @@
 import React from 'react'
 
 const Search = (props) => {
-  const handleSearch = e => {
+  const handleChange = e => {
     e.preventDefault();
-    const searchInput = document.querySelector('.search-input').value;
-    props.onChange(searchInput);
+    props.updateInput(e.target.value);
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    props.updatePage();
+    e.target.children[0].value = '';
+    props.getData(props.input);
   }
 
   return (
-    <form onSubmit={handleSearch}>
-      <input type="text" className="search-input" placeholder="Search..." required/>
+    <form onSubmit={handleSubmit}>
+      <input type="text" className="search-input" placeholder="Search..." onChange={handleChange} required/>
       <button type="submit">Search</button>
     </form>
   )

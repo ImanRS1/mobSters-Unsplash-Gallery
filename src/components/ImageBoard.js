@@ -1,19 +1,15 @@
 import React from 'react';
 import ImageCard from './ImageCard';
 
-const ImageBoard = () => {
+const ImageBoard = props => {
+
+  const imageGenerator = data => {
+    return data.map(img => <ImageCard url={img.urls.small} author={img.user.name} descript={img.alt_description} />)
+  }
+
   return (
     <section>
-      <ImageCard />
-      <ImageCard />
-      <ImageCard />
-      <ImageCard />
-      <ImageCard />
-      <ImageCard />
-      <ImageCard />
-      <ImageCard />
-      <ImageCard />
-      <ImageCard />
+      {imageGenerator(props.data)}
     </section>
   )
 }
