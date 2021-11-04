@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import styled from "styled-components";
 
 const Search = (props) => {
@@ -7,10 +8,13 @@ const Search = (props) => {
     props.updateInput(e.target.value);
   };
 
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     props.updatePage(props.input);
     e.target.children[0].value = "";
+    navigate(`/search/${props.input}`);
   };
 
   return (

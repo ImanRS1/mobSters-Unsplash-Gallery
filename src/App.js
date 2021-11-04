@@ -35,13 +35,15 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header />
+      <Header input={input}/>
       <Routes>
-        <Route path="/search">
-          <Search updateInput={updateInput} input={input} updatePage={updatePage} page={page} />
-          <ImageBoard data={data}/>
-          <Pagination page={page} updatePage={updatePage} totalPages={totalPages} input={input} />
-        </Route>
+        <Route path="/search/:input" element={
+          <div>
+            <Search updateInput={updateInput} input={input} updatePage={updatePage} page={page} />
+            <ImageBoard data={data} />
+            <Pagination page={page} updatePage={updatePage} totalPages={totalPages} input={input} />
+          </div>
+        } />
         <Route path="/about" />
         <Route path="/" element={<Search updateInput={updateInput} input={input} updatePage={updatePage} page={page} />} />
       </Routes>
