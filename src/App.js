@@ -1,12 +1,14 @@
 import './App.css';
 import React, { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 import Header from './components/Header';
 import Search from './components/Search';
 import ImageBoard from './components/ImageBoard';
 import Pagination from './components/Pagination';
 import Footer from './components/Footer';
+import Welcome from './components/Welcome';
+import About from './components/About';
 
 const App = () => {
   const [input, setInput] = useState('');
@@ -34,21 +36,31 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <Header input={input}/>
-      <Routes>
-        <Route path="/search/:input" element={
-          <div>
+    <BrowserRouter>
+      <div className="App">
+        <Header input={input}/>
+        <Routes>
+          <Route path="/" element={
+            <div>
+              <Search updateInput={updateInput} input={input} updatePage={updatePage} page={page} />
+              <Welcome />
+            </div>
+          } />
+          <Route path="/search" element={
             <Search updateInput={updateInput} input={input} updatePage={updatePage} page={page} />
-            <ImageBoard data={data} />
-            <Pagination page={page} updatePage={updatePage} totalPages={totalPages} input={input} />
-          </div>
-        } />
-        <Route path="/about" />
-        <Route path="/" element={<Search updateInput={updateInput} input={input} updatePage={updatePage} page={page} />} />
-      </Routes>
-      <Footer />
-    </div>
+          }/>
+          <Route path="/search/:input" element={
+            <div>
+              <Search updateInput={updateInput} input={input} updatePage={updatePage} page={page} />
+              <ImageBoard data={data} />
+              <Pagination page={page} updatePage={updatePage} totalPages={totalPages} input={input} />
+            </div>
+          } />
+          <Route path="/about" element={<About />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

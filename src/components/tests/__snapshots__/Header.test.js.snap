@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Basic Header test Header snapshot 1`] = `
+<header
+  className="sc-bdvvtL hHHJBI"
+>
+  <h1
+    className="sc-gsDKAQ dTOPoC"
+  >
+    mobSters Gallery
+  </h1>
+  <nav>
+    <ul>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+      <a
+        href="/search/carts"
+        onClick={[Function]}
+      >
+        Search
+      </a>
+      <a
+        href="/about"
+        onClick={[Function]}
+      >
+        About
+      </a>
+    </ul>
+  </nav>
+</header>
+`;

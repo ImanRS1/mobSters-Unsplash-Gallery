@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import renderer from 'react-test-renderer';
 import App from './App';
 
 describe('Basic App test', () => {
@@ -9,4 +10,10 @@ describe('Basic App test', () => {
     ReactDOM.render(<App />, div);
     ReactDOM.unmountComponentAtNode(div);
   })
+  test('App snapshot', () => {
+    const AppComponent = renderer.create(<App />).toJSON();
+    expect(AppComponent).toMatchSnapshot();
+  });
 });
+
+

@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Basic ImageBoard test 2 Images render correctly 1`] = `
+<section
+  className="sc-jRQBWg gZOzDJ"
+>
+  <article
+    className="sc-gsDKAQ kfHKIi"
+  >
+    <div
+      className="sc-bdvvtL gHIAtL"
+    >
+      <div
+        className="sc-dkPtRN ljzhnS"
+      >
+        <img
+          alt="Hello"
+          className="sc-eCImPb exxfQC"
+          src="https://picsum.photos/id/237/200/300"
+        />
+      </div>
+      <div
+        className="sc-hKwDye ghZbUD"
+      >
+        <h3>
+          Mariana
+        </h3>
+        <p>
+          Hello
+        </p>
+      </div>
+    </div>
+  </article>
+  <article
+    className="sc-gsDKAQ kfHKIi"
+  >
+    <div
+      className="sc-bdvvtL gHIAtL"
+    >
+      <div
+        className="sc-dkPtRN ljzhnS"
+      >
+        <img
+          alt="Hello"
+          className="sc-eCImPb exxfQC"
+          src="https://picsum.photos/id/237/200/300"
+        />
+      </div>
+      <div
+        className="sc-hKwDye ghZbUD"
+      >
+        <h3>
+          Mariana
+        </h3>
+        <p>
+          Hello
+        </p>
+      </div>
+    </div>
+  </article>
+</section>
+`;
+
+exports[`Basic ImageBoard test Images render correctly 1`] = `
+<section
+  className="sc-jRQBWg gZOzDJ"
+>
+  <article
+    className="sc-gsDKAQ kfHKIi"
+  >
+    <div
+      className="sc-bdvvtL gHIAtL"
+    >
+      <div
+        className="sc-dkPtRN ljzhnS"
+      >
+        <img
+          alt="Hello"
+          className="sc-eCImPb exxfQC"
+          src="https://picsum.photos/id/237/200/300"
+        />
+      </div>
+      <div
+        className="sc-hKwDye ghZbUD"
+      >
+        <h3>
+          Mariana
+        </h3>
+        <p>
+          Hello
+        </p>
+      </div>
+    </div>
+  </article>
+  <article
+    className="sc-gsDKAQ kfHKIi"
+  >
+    <div
+      className="sc-bdvvtL gHIAtL"
+    >
+      <div
+        className="sc-dkPtRN ljzhnS"
+      >
+        <img
+          alt="Hello"
+          className="sc-eCImPb exxfQC"
+          src="https://picsum.photos/id/237/200/300"
+        />
+      </div>
+      <div
+        className="sc-hKwDye ghZbUD"
+      >
+        <h3>
+          Mariana
+        </h3>
+        <p>
+          Hello
+        </p>
+      </div>
+    </div>
+  </article>
+</section>
+`;
+
+exports[`Basic ImageBoard test images render correctly 1`] = `
+<section
+  className="sc-jRQBWg gZOzDJ"
+>
+  <article
+    className="sc-gsDKAQ kfHKIi"
+  >
+    <div
+      className="sc-bdvvtL gHIAtL"
+    >
+      <div
+        className="sc-dkPtRN ljzhnS"
+      >
+        <img
+          alt="Hello"
+          className="sc-eCImPb exxfQC"
+          src="https://picsum.photos/id/237/200/300"
+        />
+      </div>
+      <div
+        className="sc-hKwDye ghZbUD"
+      >
+        <h3>
+          Mariana
+        </h3>
+        <p>
+          Hello
+        </p>
+      </div>
+    </div>
+  </article>
+  <article
+    className="sc-gsDKAQ kfHKIi"
+  >
+    <div
+      className="sc-bdvvtL gHIAtL"
+    >
+      <div
+        className="sc-dkPtRN ljzhnS"
+      >
+        <img
+          alt="Hello"
+          className="sc-eCImPb exxfQC"
+          src="https://picsum.photos/id/237/200/300"
+        />
+      </div>
+      <div
+        className="sc-hKwDye ghZbUD"
+      >
+        <h3>
+          Mariana
+        </h3>
+        <p>
+          Hello
+        </p>
+      </div>
+    </div>
+  </article>
+</section>
+`;

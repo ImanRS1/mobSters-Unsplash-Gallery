@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Basic App test App snapshot 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="sc-bdvvtL hHHJBI"
+  >
+    <h1
+      className="sc-gsDKAQ dTOPoC"
+    >
+      mobSters Gallery
+    </h1>
+    <nav>
+      <ul>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+        <a
+          href="/search/"
+          onClick={[Function]}
+        >
+          Search
+        </a>
+        <a
+          href="/about"
+          onClick={[Function]}
+        >
+          About
+        </a>
+      </ul>
+    </nav>
+  </header>
+  <div>
+    <form
+      className="sc-dkPtRN RMDLC"
+      onSubmit={[Function]}
+    >
+      <input
+        className="search-input"
+        onChange={[Function]}
+        placeholder="Search..."
+        required={true}
+        type="text"
+      />
+      <button
+        type="submit"
+      >
+        Search
+      </button>
+    </form>
+    <div>
+      <h2>
+        Welcome to mobSters Gallery
+      </h2>
+      <h3>
+        Let's start searching together
+      </h3>
+    </div>
+  </div>
+  <footer
+    className="sc-kDTinF iVCBnx"
+  >
+    <p>
+      GitHub Icon
+    </p>
+  </footer>
+</div>
+`;
