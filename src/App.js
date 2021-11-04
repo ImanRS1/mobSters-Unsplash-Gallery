@@ -1,6 +1,6 @@
 import './App.css';
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Header from './components/Header';
 import Search from './components/Search';
@@ -15,10 +15,6 @@ const App = () => {
   const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const [data, setData] = useState([]);
-
-  const updateInput = (searchInput) => {
-    setInput(searchInput);
-  };
   
   const config = {
     unsplashKey: 'lZ-oVPWLFJv-IRXFSqoTPMeyuQAXJ3IscBdCfiqSeIw',
@@ -30,28 +26,42 @@ const App = () => {
     setData(data.data.results);
   };
 
-  const updatePage = (input, num=1) => {
+  const navigate = useNavigate();
+
+  const updatePage = (str, num=1) => {
+    setInput(str);
     setPage(num);
-    getData(input, num);
+    getData(str, num);
+    navigate(`/search/${str}/${num}`);
   };
 
+  useEffect(() => {
+    const handleLocalStorage = () => {
+      const searchHistory = JSON.parse(window.localStorage.getItem('searchHistory')) || [];
+      if (!searchHistory.includes(input)) {
+        searchHistory.push(input);
+        window.localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+      }
+    } 
+    handleLocalStorage();
+  }, [input]);
+
   return (
-    <BrowserRouter>
       <div className="App">
-        <Header input={input}/>
+        <Header input={input} page={page}/>
         <Routes>
           <Route path="/" element={
             <div>
-              <Search updateInput={updateInput} input={input} updatePage={updatePage} page={page} />
+              <Search input={input} updatePage={updatePage} page={page} />
               <Welcome />
             </div>
           } />
           <Route path="/search" element={
-            <Search updateInput={updateInput} input={input} updatePage={updatePage} page={page} />
+            <Search input={input} updatePage={updatePage} page={page} />
           }/>
-          <Route path="/search/:input" element={
+          <Route path="/search/:input/:page" element={
             <div>
-              <Search updateInput={updateInput} input={input} updatePage={updatePage} page={page} />
+              <Search input={input} updatePage={updatePage} page={page} />
               <ImageBoard data={data} />
               <Pagination page={page} updatePage={updatePage} totalPages={totalPages} input={input} />
             </div>
@@ -60,7 +70,6 @@ const App = () => {
         </Routes>
         <Footer />
       </div>
-    </BrowserRouter>
   );
 }
 

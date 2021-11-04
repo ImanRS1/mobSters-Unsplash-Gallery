@@ -2,15 +2,17 @@
 
 exports[`Basic Header test Header snapshot 1`] = `
 <header
-  className="sc-bdvvtL hHHJBI"
+  className="sc-bdvvtL dyDRkl"
 >
   <h1
-    className="sc-gsDKAQ dTOPoC"
+    className="sc-gsDKAQ cZGMWC"
   >
     mobSters Gallery
   </h1>
   <nav>
-    <ul>
+    <ul
+      className="sc-dkPtRN gHBnsH"
+    >
       <a
         href="/"
         onClick={[Function]}
@@ -18,7 +20,7 @@ exports[`Basic Header test Header snapshot 1`] = `
         Home
       </a>
       <a
-        href="/search/carts"
+        href="/search/carts/undefined"
         onClick={[Function]}
       >
         Search

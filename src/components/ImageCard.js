@@ -27,9 +27,9 @@ const InnerCard = styled.div`
 `;
 
 const Article = styled.article`
-  width: 80vw;
+  width: 300px;
   height: 300px;
-  padding-bottom: 1.5rem;
+  padding: 1.5rem 1rem;
   perspective: 1000px;
 
   &:hover ${InnerCard} {

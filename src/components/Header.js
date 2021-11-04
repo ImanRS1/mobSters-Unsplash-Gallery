@@ -9,7 +9,7 @@ const Header = (props) => {
       <nav>
         <NavBar>
           <Link to="/">Home</Link>
-          <Link to={`/search/${props.input}`}>Search</Link>
+          <Link to={`/search/${props.input}/${props.page}`}>Search</Link>
           <Link to="/about">About</Link>
         </NavBar>
       </nav>
@@ -19,7 +19,7 @@ const Header = (props) => {
 
 const HeaderS = styled.header`
   width: 100vw;
-  height: 10vh;
+  height: 15vh;
   position: fixed;
   top: 0;
   display: flex;
@@ -29,6 +29,14 @@ const HeaderS = styled.header`
   background-color: #fcf6f5ff;
   border-bottom: 4px solid #a13941ff;
   z-index: 5;
+
+  @media (min-width: 400px) {
+    height: 10vh;
+  }
+
+  @media (min-width: 700px) {
+    height: 8vh;
+  }
 `;
 
 const Logo = styled.h1`

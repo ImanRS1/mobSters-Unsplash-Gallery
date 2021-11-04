@@ -12,7 +12,9 @@ const About = () => {
 }
 
 const AboutContainer = styled.div`
-  padding: 5rem 10% 0;
+  padding: 12vh 1.5rem 0;
+  max-width: 1440px;
+  margin: 0 auto;
   h2 {
     text-align: center;
     padding-bottom: 1rem;

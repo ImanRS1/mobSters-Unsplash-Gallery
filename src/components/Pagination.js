@@ -35,7 +35,7 @@ const ButtonContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  padding-bottom: 3rem;
+  padding-bottom: 7vh;
 `;
 
 export default Pagination;

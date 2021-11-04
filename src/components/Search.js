@@ -1,20 +1,11 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Search = (props) => {
-  const handleChange = (e) => {
-    e.preventDefault();
-    props.updateInput(e.target.value);
-  };
-
-  const navigate = useNavigate();
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.updatePage(props.input);
+    props.updatePage(e.target.children[0].value);
     e.target.children[0].value = "";
-    navigate(`/search/${props.input}`);
   };
 
   return (
@@ -24,7 +15,6 @@ const Search = (props) => {
           type="text"
           className="search-input"
           placeholder="Search..."
-          onChange={handleChange}
           required
         />
         <button type="submit">Search</button>
@@ -34,9 +24,19 @@ const Search = (props) => {
 };
 
 const SearchContainer = styled.div`
-  padding-top: 6.5rem;
+  padding-top: 19vh;
   display: flex;
   justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+
+  @media (min-width: 400px) {
+    padding-top: 14vh;
+  }
+
+  @media (min-width: 700px) {
+    padding-top: 10vh;
+  }
 `;
 
 const SearchForm = styled.form`
