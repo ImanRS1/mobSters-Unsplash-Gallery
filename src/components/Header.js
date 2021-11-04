@@ -1,10 +1,18 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import styled from "styled-components";
 
 const Header = () => {
   return (
     <HeaderS>
       <Logo>mobSters Gallery</Logo>
+      <nav>
+        <ul>
+          <Link to="/">Home</Link>
+          <Link to="/search/:input">Search</Link>
+          <Link to="/about">About</Link>
+        </ul>
+      </nav>
     </HeaderS>
   );
 };

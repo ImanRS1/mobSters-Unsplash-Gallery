@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 import Header from './components/Header';
 import Search from './components/Search';
@@ -35,9 +36,15 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <Search updateInput={updateInput} input={input} updatePage={updatePage} page={page} />
-      <ImageBoard data={data}/>
-      <Pagination page={page} updatePage={updatePage} totalPages={totalPages} input={input} />
+      <Routes>
+        <Route path="/search">
+          <Search updateInput={updateInput} input={input} updatePage={updatePage} page={page} />
+          <ImageBoard data={data}/>
+          <Pagination page={page} updatePage={updatePage} totalPages={totalPages} input={input} />
+        </Route>
+        <Route path="/about" />
+        <Route path="/" element={<Search updateInput={updateInput} input={input} updatePage={updatePage} page={page} />} />
+      </Routes>
       <Footer />
     </div>
   );
