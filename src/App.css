@@ -1,7 +1,23 @@
 @import url("./styles/normalize.css");
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@500&display=swap');
 
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #fcf6f5ff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+}
+
+html {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.App {
+  position: relative;
+  min-height: 100vh;
 }

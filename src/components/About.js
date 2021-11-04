@@ -12,7 +12,14 @@ const About = () => {
 }
 
 const AboutContainer = styled.div`
-  margin-top: 6.5rem;
+  padding: 5rem 10% 0;
+  h2 {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
 `;
 
 export default About
