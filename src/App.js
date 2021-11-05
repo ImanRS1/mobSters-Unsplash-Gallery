@@ -4,6 +4,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Header from './components/Header';
 import Search from './components/Search';
+import SearchText from './components/SearchText';
 import ImageBoard from './components/ImageBoard';
 import Pagination from './components/Pagination';
 import Footer from './components/Footer';
@@ -28,10 +29,10 @@ const App = () => {
 
   const navigate = useNavigate();
 
-  const updatePage = (str, num=1) => {
+  const updatePage = async (str, num=1) => {
     setInput(str);
     setPage(num);
-    getData(str, num);
+    await getData(str, num);
     navigate(`/search/${str}/${num}`);
   };
 
@@ -57,7 +58,10 @@ const App = () => {
             </div>
           } />
           <Route path="/search" element={
-            <Search input={input} updatePage={updatePage} page={page} />
+            <div>
+              <Search input={input} updatePage={updatePage} page={page} />
+              <SearchText />
+            </div>
           }/>
           <Route path="/search/:input/:page" element={
             <div>

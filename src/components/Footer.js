@@ -16,7 +16,8 @@ const Footer = () => {
 const FooterS = styled.footer`
   margin-top: 1.5rem;
   width: 100vw;
-  height: 7vh;
+  height: 9vh;
+  padding-top: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +25,14 @@ const FooterS = styled.footer`
   position: absolute;
   bottom: 0;
   font-size: 2.8rem;
+
+  @media (min-width: 400px) {
+    height: 7vh;
+  }
+
+  @media (min-width: 700px) {
+    height: 5vh;
+  }
 `;
 
 export default Footer;

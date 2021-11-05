@@ -6,6 +6,7 @@ body {
   min-height: 100vh;
   background-color: #fcf6f5ff;
   font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -15,6 +16,9 @@ h1 {
 html {
   width: 100vw;
   min-height: 100vh;
+  bottom: 0;
+  top: 0;
+  position: absolute;
 }
 
 .App {

@@ -31,11 +31,15 @@ const SearchContainer = styled.div`
   margin: 0 auto;
 
   @media (min-width: 400px) {
-    padding-top: 14vh;
+    padding-top: 15vh;
   }
 
   @media (min-width: 700px) {
-    padding-top: 10vh;
+    padding-top: 12vh;
+  }
+
+  @media (min-width: 1500px) {
+    padding-top: 11vh;
   }
 `;
 

@@ -5,7 +5,10 @@ import styled from "styled-components";
 const ImageBoard = props => {
 
   const imageGenerator = data => {
-    return data.map(img => <ImageCard url={img.urls.small} author={img.user.name} descript={img.alt_description} key={img.id} />)
+    if(data.length === 0) {
+      return <p className="no-results">Oops... We couldn't find any results for your search.</p>
+    }
+    return data.map(img => <ImageCard url={img.urls.small} author={img.user.name} descript={img.alt_description} key={img.id} />);
   }
 
   return (
@@ -22,6 +25,12 @@ const ImageContainer = styled.section`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+
+  .no-results {
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
 `;
 
 export default ImageBoard

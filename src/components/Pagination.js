@@ -6,7 +6,7 @@ const Pagination = (props) => {
   const renderPrev = (page) =>
     page > 1 && (
       <PaginationButton
-        value={"Previous"}
+        value={"<"}
         page={props.page}
         updatePage={props.updatePage}
         input={props.input}
@@ -16,7 +16,7 @@ const Pagination = (props) => {
   const renderNext = (page, total) =>
     page < total && (
       <PaginationButton
-        value={"Next"}
+        value={">"}
         page={props.page}
         updatePage={props.updatePage}
         input={props.input}
@@ -35,7 +35,11 @@ const ButtonContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  padding-bottom: 7vh;
+  padding-bottom: 10vh;
+
+  @media (min-width: 700px) {
+    padding-bottom: 8vh;
+  }
 `;
 
 export default Pagination;
